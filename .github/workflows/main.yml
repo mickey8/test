@@ -8,7 +8,7 @@ on:
       param2:
         type: boolean
       param3:
-        type: string
+        type: choice
         options:
           - hoge
           - moge
