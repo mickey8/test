@@ -1,7 +1,23 @@
 name: CI
-on: [push,workflow_dispatch]
+on:
+  workflow_dispatch:
+    inputs:
+      param1:
+        type: string
+        required: true
+      param2:
+        type: boolean
+      param3:
+        type: string
+        options:
+          - hoge
+          - moge
+          - huga        
+        
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo 'hoge'
+      - run: echo "${{ github.event.inputs.param1 }}"
+      - run: echo "${{ github.event.inputs.param2 }}"
+      - run: echo "${{ github.event.inputs.param3 }}"
