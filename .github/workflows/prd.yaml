@@ -1,0 +1,9 @@
+name: test/CI_prd
+on:
+  workflow_dispatch:
+        
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "hoge prd"
