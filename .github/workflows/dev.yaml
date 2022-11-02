@@ -9,3 +9,9 @@ jobs:
       image: node
     steps:
       - run: yarn --version
+  build2:
+    runs-on: self-hosted
+    container:
+      image: node
+    steps:
+      - run: yarn --version
