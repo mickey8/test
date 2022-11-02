@@ -9,9 +9,11 @@ jobs:
       image: node
     steps:
       - run: yarn --version
+      - run: sleep 30
   build2:
     runs-on: self-hosted
     container:
       image: node
     steps:
       - run: yarn --version
+      - run: sleep 30
