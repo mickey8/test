@@ -16,7 +16,7 @@ on:
         
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: self-hosted, normal
     steps:
       - run: echo "${{ github.event.inputs.param1 }}"
       - run: echo "${{ github.event.inputs.param2 }}"
