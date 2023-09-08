@@ -4,7 +4,7 @@ on:
         
 jobs:
   build:
-    runs-on: [self-hosted, normal]
+    runs-on: [ubuntu-latest]
     environment: test
     steps:
       - run: echo "${{ toJSON(github) }}"
