@@ -1,27 +1,12 @@
 name: CI
-permissions:
-  contents: read
 on:
   workflow_dispatch:
-    inputs:
-      param1:
-        type: string
-        required: true
-      param2:
-        type: boolean
-      param3:
-        type: choice
-        options:
-          - hoge
-          - moge
-          - huga        
         
 jobs:
   build:
     runs-on: [self-hosted, normal]
+    environment: test
     steps:
-      - run: echo "${{ github.event.inputs.param1 }}"
-      - run: echo "${{ github.event.inputs.param2 }}"
-      - run: echo "${{ github.event.inputs.param3 }}"
-      - run: sleep 30
+      - run: echo "${{ toJSON(github) }}"
+      - run: echo "${{ toJSON(job) }}"
       - run: echo "finish"
